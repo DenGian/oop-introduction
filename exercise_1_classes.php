@@ -15,7 +15,7 @@ TODO: Print the temperature on the screen.
 
 USE TYPEHINTING EVERYWHERE!
 */
-class Beverage
+class beverage
 {
     // properties
     public string $color;
@@ -32,7 +32,7 @@ class Beverage
         $this-> name = $name;
     }
     public function getInfo() {
-        echo "$this->name is $this->temperature and $this->color";
+        echo "$this->name is $this->temperature and costs $this->price euro, it has the color $this->color";
         echo '<br>';
     }
 }
