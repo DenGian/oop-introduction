@@ -40,11 +40,11 @@ class Beer extends Beverage
         return $this->alcoholPercentage;
     }
 }
-// // creation of a new object in class (Duvel)
+// creation of a new object in class (Duvel)
 $duvel = new Beer('Duvel', 3.5, 'blond', 8.5);
-// getter from parent class
+// getter from parent class to get the info
 $duvel->getInfo();
-// getter from child class
+// getter from child class to get alcohol percentage
 echo $duvel->getAlcoholPercentage() . '<br>';
 // display of alcohol percentage without getter
 echo $duvel->alcoholPercentage . '<br>';
