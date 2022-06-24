@@ -21,27 +21,34 @@ USE TYPEHINTING EVERYWHERE!
 
 require 'exercise_1_classes.php';
 
+// a new class Beer that EXTENDS from Beverage / Child - Parent / access to the same properties
 class Beer extends Beverage
 {
     // properties
     public float $alcoholPercentage;
 
-// constructor, methods
+/// creating methods (the functions)
+// constructor
     public function __construct(string $name, float $price, string $color, float $alcoholPercentage)
     {
         parent::__construct($name, $price, $color);
         $this->alcoholPercentage = $alcoholPercentage;
     }
-
+// getter for alcohol percentage
     public function getAlcoholPercentage(): float
     {
         return $this->alcoholPercentage;
     }
 }
-
+// // creation of a new object in class (Duvel)
 $duvel = new Beer('Duvel', 3.5, 'blond', 8.5);
+// getter from parent class
 $duvel->getInfo();
+// getter from child class
 echo $duvel->getAlcoholPercentage() . '<br>';
+// display of alcohol percentage without getter
 echo $duvel->alcoholPercentage . '<br>';
+// display of color
 echo $duvel->color . '<br>';
+// intentional error message / Cola is an object of parent class and can't access child class properties
 echo $cola->getAlcoholPercentage();

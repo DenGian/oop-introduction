@@ -15,6 +15,9 @@ TODO: Print the temperature on the screen.
 
 USE TYPEHINTING EVERYWHERE!
 */
+
+
+// defining class
 class Beverage
 {
     // properties
@@ -23,20 +26,23 @@ class Beverage
     public string $temperature;
     public string $name;
 
+/// creating methods (the functions)
 // constructor
-    public function __construct(string $name, float $price, string $color)
+    public function __construct(string $name, float $price, string $color) // required properties
     {
         $this-> color = $color;
         $this-> price = $price;
         $this-> temperature = 'cold';
         $this-> name = $name;
     }
-    public function getInfo() : void {
-        echo "$this->name is $this->temperature and costs $this->price euro, it has the color $this->color";
+// getter
+    public function getInfo() : void { // empty
+        echo "$this->name is $this->temperature and costs $this->price euro, it has the color $this->color"; // displayed string on screen
         echo '<br>';
     }
 }
-$cola = new Beverage('Cola', 2, 'black');
+// creation of a new object in class (Cola)
+$cola = new Beverage('Cola', 2, 'black'); // parameters of new beverage with the info for Cola
 
 $cola-> getInfo();
-echo $cola->temperature;
+echo $cola->temperature; // show temperature on the screen
